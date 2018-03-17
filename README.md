@@ -1,17 +1,18 @@
-# go-onedrive [![Build Status](https://travis-ci.org/ggordan/go-onedrive.svg?branch=master)](https://travis-ci.org/ggordan/go-onedrive) [![Coverage Status](https://coveralls.io/repos/ggordan/go-onedrive/badge.svg?branch=master)](https://coveralls.io/r/ggordan/go-onedrive?branch=master)
+# onedrive
 
+[![Build Status](https://travis-ci.org/ggordan/onedrive.svg?branch=master)](https://travis-ci.org/ggordan/onedrive) [![Coverage Status](https://coveralls.io/repos/ggordan/onedrive/badge.svg?branch=master)](https://coveralls.io/r/ggordan/onedrive?branch=master)
 
-go-onedrive is a Go client library for accessing the Microsoft OneDrive API.
+onedrive is a Go client library for accessing the Microsoft OneDrive API.
 
-# Documentation
+## Documentation
 
-https://godoc.org/github.com/ggordan/go-onedrive
+https://godoc.org/github.com/boki/onedrive
 
-# Example
+## Example
 
-Get an access token via the [token flow](http://onedrive.github.io/auth/msa_oauth.htm#token-flow) or the [code flow](http://onedrive.github.io/auth/msa_oauth.htm#code-flow)...
+Get an access token via the [token flow](http://onedrive.github.io/auth/msa_oauth.htm#token-flow) or the [code flow](http://onedrive.github.io/auth/msa_oauth.htm#code-flow).
 
-# TODO
+## TODO
 
 - [x] Drives
  - [x] Get Default Drive
@@ -33,6 +34,6 @@ Get an access token via the [token flow](http://onedrive.github.io/auth/msa_oaut
  	- [ ] Resumable item upload
  	- [x] Upload from URL
 
-# License
+## License
 
 MIT
