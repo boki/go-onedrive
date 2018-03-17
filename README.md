@@ -1,6 +1,6 @@
 # onedrive
 
-[![Build Status](https://travis-ci.org/ggordan/onedrive.svg?branch=master)](https://travis-ci.org/ggordan/onedrive) [![Coverage Status](https://coveralls.io/repos/ggordan/onedrive/badge.svg?branch=master)](https://coveralls.io/r/ggordan/onedrive?branch=master)
+[![Build Status](https://travis-ci.org/boki/onedrive.svg?branch=master)](https://travis-ci.org/boki/onedrive) [![Coverage Status](https://coveralls.io/repos/boki/onedrive/badge.svg?branch=master)](https://coveralls.io/r/boki/onedrive?branch=master)
 
 onedrive is a Go client library for accessing the Microsoft OneDrive API.
 
