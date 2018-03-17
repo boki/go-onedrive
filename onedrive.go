@@ -32,7 +32,7 @@ func NewOneDrive(c *http.Client, debug bool) *OneDrive {
 		Client:   c,
 		BaseURL:  baseURL,
 		Debug:    debug,
-		throttle: time.Now(),
+		throttle: time.Now().Add(-1 * time.Second), // Make time.Now.().After happy...
 	}
 	drive.Drives = &DriveService{&drive}
 	drive.Items = &ItemService{&drive}
