@@ -93,7 +93,7 @@ func TestGet(t *testing.T) {
 		mux.HandleFunc(driveURIFromID(tst.driveID), fileWrapperHandler(validFixtureFromDriveID(tst.driveID), 200))
 		drive, _, err := oneDrive.Drives.Get(tst.driveID)
 		if err != nil {
-			t.Fatalf("Problem fetching the default drive: %s", err.Error())
+			t.Fatalf("Problem fetching the drive: %s", err.Error())
 		}
 		if !reflect.DeepEqual(drive, tst.expectedOut) {
 			t.Errorf("[%d] Got %v Expected %v", i, drive, tst.expectedOut)
@@ -112,14 +112,12 @@ func TestGetMissing(t *testing.T) {
 	}
 
 	expectedErr := &Error{
-		innerError{
-			Code:    "itemNotFound",
-			Message: "Item Does Not Exist",
-			InnerError: &innerError{
-				Code: "itemDoesNotExist",
-				InnerError: &innerError{
-					Code: "folderDoesNotExist",
-				},
+		Code:    "itemNotFound",
+		Message: "Item Does Not Exist",
+		InnerError: &Error{
+			Code: "itemDoesNotExist",
+			InnerError: &Error{
+				Code: "folderDoesNotExist",
 			},
 		},
 	}
@@ -185,12 +183,10 @@ func TestListAllDrivesInvalid(t *testing.T) {
 	}
 
 	expectedErr := &Error{
-		innerError{
-			Code:    "invalidArgument",
-			Message: "Bad Argument",
-			InnerError: &innerError{
-				Code: "badArgument",
-			},
+		Code:    "invalidArgument",
+		Message: "Bad Argument",
+		InnerError: &Error{
+			Code: "badArgument",
 		},
 	}
 

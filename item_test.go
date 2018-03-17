@@ -200,14 +200,12 @@ func TestGetItemInvalid(t *testing.T) {
 	}
 
 	expectedErr := &Error{
-		innerError{
-			Code:    "itemNotFound",
-			Message: "Item Does Not Exist",
-			InnerError: &innerError{
-				Code: "itemDoesNotExist",
-				InnerError: &innerError{
-					Code: "folderDoesNotExist",
-				},
+		Code:    "itemNotFound",
+		Message: "Item Does Not Exist",
+		InnerError: &Error{
+			Code: "itemDoesNotExist",
+			InnerError: &Error{
+				Code: "folderDoesNotExist",
 			},
 		},
 	}
